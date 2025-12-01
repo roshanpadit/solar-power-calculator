@@ -1,17 +1,8 @@
-"""
-Solar Power Calculator
-Author: Roshan Padit
-GitHub: github.com/roshanpadit
-
-This script estimates solar energy generation, savings
-and payback period for a small rooftop solar system.
-"""
-
 from config import AVERAGE_SOLAR_IRRADIANCE_KWH_M2_DAY, DEFAULT_ELECTRICITY_RATE
 
 
 def get_float_input(prompt, default=None):
-    """Safely get a float input from user."""
+   
     while True:
         user_input = input(prompt).strip()
         if user_input == "" and default is not None:
@@ -26,7 +17,7 @@ def get_float_input(prompt, default=None):
             print("Invalid number, try again.")
 
 
-def calculate_solar_output(panel_wattage, number_of_panels,
+def calculate_solar_output(panel_wattage, number_of_panels, 
                            system_efficiency, irradiance_kwh_m2_day):
     """
     Returns a dict with daily & monthly energy output (kWh).
